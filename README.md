@@ -3,10 +3,10 @@
 This project demonstrates the fine-tuning of a pre-trained Transformer model(T5) using LoRA (Low-Rank Adaptation) on the SAMSum dataset. 
 LoRA allows for parameter-efficient training by adapting only a small subset of the model's weights.
 
-The requirements file should include:
+## The requirements file should include:
 
-peft==0.2.0
-transformers==4.27.2
+peft==0.2.0\
+transformers==4.27.2 \
 datasets==2.9.0
 accelerate==0.17.1
 evaluate==0.4.0
