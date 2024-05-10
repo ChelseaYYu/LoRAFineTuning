@@ -13,7 +13,7 @@ evaluate==0.4.0 \
 loralib \
 rouge-score \
 tensorboard \
-py7zr \
+py7zr 
 
 ## Dataset
 The SAMSum dataset, which contains conversational summaries, is used for training and evaluation. It can be loaded directly from Hugging Face's datasets library:
