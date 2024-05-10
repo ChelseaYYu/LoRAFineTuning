@@ -25,8 +25,8 @@ dataset = load_dataset("samsum")
 ## Preprocessing
 Tokenization and preparation of the data are crucial steps before training:
 
-python
-Copy code
+```python
+
 from transformers import AutoTokenizer
 tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-small")
 
