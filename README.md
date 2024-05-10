@@ -7,14 +7,15 @@ LoRA allows for parameter-efficient training by adapting only a small subset of 
 
 peft==0.2.0\
 transformers==4.27.2 \
-datasets==2.9.0
-accelerate==0.17.1
-evaluate==0.4.0
-loralib
-rouge-score
-tensorboard
-py7zr
-Dataset
+datasets==2.9.0 \
+accelerate==0.17.1 \
+evaluate==0.4.0 \
+loralib \
+rouge-score \
+tensorboard \
+py7zr \
+
+## Dataset
 The SAMSum dataset, which contains conversational summaries, is used for training and evaluation. It can be loaded directly from Hugging Face's datasets library:
 
 python
