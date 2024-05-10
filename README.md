@@ -42,11 +42,11 @@ def preprocess_function(examples):
     return model_inputs
 
 tokenized_datasets = dataset.map(preprocess_function, batched=True)
+```
 ## Model Training
 Fine-tuning is done using the LoRA technique, which is integrated with the Hugging Face transformers library:
 
-python
-Copy code
+```python
 from transformers import AutoModelForSeq2SeqLM, Seq2SeqTrainer, Seq2SeqTrainingArguments
 from peft import LoraConfig, get_peft_model
 
@@ -75,22 +75,25 @@ trainer = Seq2SeqTrainer(
 )
 
 trainer.train()
-Evaluation
+```
+## Evaluation
 After training, evaluate the model's performance using the ROUGE metric:
 
-python
-Copy code
+```python
+
 import evaluate
 
 rouge = evaluate.load("rouge")
 results = rouge.compute(predictions=trainer.predict(tokenized_datasets["test"]).predictions, references=tokenized_datasets["test"]["summary"])
 print(results)
-Saving and Loading the Model
+```
+## Saving and Loading the Model
 You can save the model to Hugging Face's Model Hub for easy access and sharing:
 
-python
-Copy code
+```python
+
 model.push_to_hub("YourModelName")
+```
 To load the model:
 
 python
