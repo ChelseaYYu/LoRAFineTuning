@@ -18,10 +18,11 @@ py7zr
 ## Dataset
 The SAMSum dataset, which contains conversational summaries, is used for training and evaluation. It can be loaded directly from Hugging Face's datasets library:
 
-python
+```python
 
 from datasets import load_dataset
 dataset = load_dataset("samsum")
+```
 ## Preprocessing
 Tokenization and preparation of the data are crucial steps before training:
 
@@ -96,10 +97,11 @@ model.push_to_hub("YourModelName")
 ```
 To load the model:
 
-python
-Copy code
+```python
+
 from transformers import AutoModelForSeq2SeqLM
 
 model = AutoModelForSeq2SeqLM.from_pretrained("YourModelName")
-Conclusion
+```
+## Conclusion
 This project highlights how LoRA can be effectively utilized for fine-tuning language models on summary tasks, achieving substantial performance gains with minimal computational resources.
